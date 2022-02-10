@@ -1,0 +1,21 @@
+@import "assets/css/colors";
+
+.DropDownMenu {
+  display: inline;
+}
+
+.DropDownMenuListContainer {
+  top: 63px !important;
+
+  & ul {
+    li {
+      svg {
+        margin-right: 8px;
+      }
+    }
+    li:hover {
+      background: $black;
+      color: $white;
+    }
+  }
+}
