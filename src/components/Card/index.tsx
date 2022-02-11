@@ -1,9 +1,8 @@
 import {makeStyles, } from "@mui/styles";
 import React from "react";
-import PropTypes from "prop-types";
 import Paper from "@mui/material/Paper";
 import {createStyles, Theme} from "@mui/material";
-import CardProps from "interfaces/props/Card";
+import CardProps from "interfaces/props/ICard";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -14,7 +13,6 @@ const useStyles = makeStyles((theme: Theme) =>
     }),
 );
 export default function Card({  children }: CardProps) {
-
   const classes = useStyles();
   return (
     <Paper component="div" classes={classes} sx={{ boxShadow: 1 }}>
@@ -22,11 +20,3 @@ export default function Card({  children }: CardProps) {
     </Paper>
   );
 }
-
-Card.defaultProps = {
-  fullHeight: false,
-};
-Card.propTypes = {
-  fullHeight: PropTypes.bool,
-  children: PropTypes.element.isRequired,
-};

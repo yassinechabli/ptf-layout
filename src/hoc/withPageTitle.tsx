@@ -1,8 +1,9 @@
 import PageTitle from "components/PageTitle";
 import React from "react";
+import IWithPageTitle from "interfaces/hoc/IWithPageTitle";
 
 
-const withPageTitle = (WrappedComponent: any) => (moreProps: {pageTitle: string}) => (props: object) => (
+const withPageTitle = (WrappedComponent: any) => (moreProps: IWithPageTitle) => (props: object) => (
   <>
     <PageTitle title={moreProps.pageTitle} />
     <WrappedComponent {...props} />

@@ -3,12 +3,11 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Typography from "@mui/material/Typography";
 import { isEmpty } from "lodash";
-import Proptypes from "prop-types";
 import * as React from "react";
 import styles from "./_dropDownMenu.module.scss";
 import Icon from "components/Icon";
-import DropDownMenuProps from "interfaces/props/DropDownMenu";
-
+import DropDownMenuProps from "interfaces/props/IDropDownMenu";
+import ActionProps from "interfaces/props/IAction";
 /**
  *
  * @param id
@@ -58,8 +57,7 @@ const DropDownMenu = ({ id, actions, item }: DropDownMenuProps) => {
               className: styles.DropDownMenuListContainer,
               id: `menu-${id}-paper`,
             }}>
-            {actions.map(({ icon, label, onClick }: {icon:string, label: string, onClick: () => void
-            }) => (
+            {actions.map(({ icon, label, onClick }: ActionProps) => (
               <MenuItem
                 key={label}
                 onClick={() => {
@@ -77,15 +75,6 @@ const DropDownMenu = ({ id, actions, item }: DropDownMenuProps) => {
   );
 };
 
-DropDownMenu.propTypes = {
-  id: Proptypes.string.isRequired,
-  item: Proptypes.oneOfType([Proptypes.string, Proptypes.element]).isRequired,
-  actions: Proptypes.arrayOf(
-    Proptypes.shape({
-      label: Proptypes.string,
-      onClick: Proptypes.func,
-    }),
-  ).isRequired,
-};
+
 
 export default DropDownMenu;

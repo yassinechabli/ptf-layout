@@ -2,7 +2,7 @@ import React from "react";
 import { find, isUndefined } from "lodash";
 import PropTypes from "prop-types";
 import IconsMapper from "components/Icon/Icons";
-import IconProps from "interfaces/props/Icon";
+import IconProps from "interfaces/props/IIcon";
 /**
  *
  * @param icon

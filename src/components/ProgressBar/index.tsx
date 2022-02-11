@@ -1,7 +1,7 @@
 import LinearProgress from "@mui/material/LinearProgress";
 import Proptypes from "prop-types";
 import React from "react";
-import ProgressBarProps from "interfaces/props/ProgressBar";
+import ProgressBarProps from "interfaces/props/IProgressBar";
 
 /**
  *

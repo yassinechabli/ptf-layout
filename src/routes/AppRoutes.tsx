@@ -14,7 +14,6 @@ const Routes = () => {
                   key={path}
                   path={path}
                   element={<Page/>}
-                  children={(props: any)=> <Page {...props}/>}
                 />
               ) : null)}
           </ReactRouterRoutes>
